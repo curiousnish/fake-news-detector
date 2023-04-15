@@ -1,4 +1,10 @@
 import streamlit as st
+import pickle
 
 
-st.title('Uber pickups in NYC')
+st.title('Fake News Detector')
+
+
+loaded_model = pickle.load(open("model.sav", 'rb'))
+
+pred = loaded_model.predict()
